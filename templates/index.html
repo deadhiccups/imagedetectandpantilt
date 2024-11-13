@@ -1,0 +1,44 @@
+<html
+	<head>
+		<title>Pan/Tilt</title>
+		<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+	</head>
+    <body>
+    <h1>Pan Tilt</h1>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <div id="container">
+    <img src="{{ url_for('video_feed') }}">
+    </div>
+    <p>&nbsp</p>
+    <p>&nbsp</p>
+    <table>
+      <tr><td colspan="3" align="center"><button class="button" onmousedown="toggleCheckbox('up');" 				 
+      ontouchstart="toggleCheckbox('up');">Up</button></td></tr>
+      <tr><td align="center"><button class="button" onmousedown="toggleCheckbox('left');" 
+      ontouchstart="toggleCheckbox('left');">Left</button></td><td align="center"></td><td align="center">
+      <button class="button" onmousedown="toggleCheckbox('right');" ontouchstart="toggleCheckbox('right');">Right
+      </button></td></tr>
+      <tr><td colspan="3" align="center"><button class="button" 
+      onmousedown="toggleCheckbox('down');" ontouchstart="toggleCheckbox('down');">Down</button></td></tr>
+    </table>
+    <table>
+      <tr><td align="center"><button class="button" onmousedown="toggleCheckbox('track');" 
+      ontouchstart="toggleCheckbox('track');">Track</button></td></tr>
+    </table>
+  <script>
+   function toggleCheckbox(x) {
+   var request = new XMLHttpRequest();
+   request.open("GET", "/" + x, true);
+   request.send();
+   }
+  </script>
+  </body>
+</html>
+	</body>
+</html>
+<!--
+     var xhr = new XMLHttpRequest();
+     xhr.open("post", x, true);
+     xhr.send();
+--/
