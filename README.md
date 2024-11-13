@@ -11,5 +11,7 @@ You will need a Google Coral AI USB accellerator.
 # Usage
 python3 main.py
 ```
+example
+https://www.youtube.com/shorts/lC2SVT7y0_Y
 
 
